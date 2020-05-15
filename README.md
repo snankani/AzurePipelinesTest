@@ -2,8 +2,6 @@
 
 # Azure DevOps Extension for Azure CLI
 
-jklfjalkfjsa test line ignore
-
 The Azure DevOps Extension for Azure CLI adds Pipelines, Boards, Repos, Artifacts and DevOps commands to the Azure CLI 2.0.
 
 > The Azure DevOps Extension is currently in preview but we encourage you to give it a try and provide feedback (or contribute).
