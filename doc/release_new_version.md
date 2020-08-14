@@ -1,3 +1,5 @@
+# ignore the changes in this line. test in progress.
+
 # Instructions to release a new version of Azure DevOps CLI extension
 
 The creation of a new release involves:
@@ -12,13 +14,13 @@ To do this trigger a [Azure DevOps CLI - Create Releases - YAML](https://dev.azu
 
 This build will:
 
-* create and upload wheel with the latest code (which can be downloaded from artifacts)
-* calculate sha256 for the wheel (which can be found in logs)
+- create and upload wheel with the latest code (which can be downloaded from artifacts)
+- calculate sha256 for the wheel (which can be found in logs)
 
 ### Manual Steps
 
-* Create a new release in GitHub
-* Download wheel from build artifacts and put the same in GitHub releases
+- Create a new release in GitHub
+- Download wheel from build artifacts and put the same in GitHub releases
 
 ## Updating index file in Azure CLI extensions repository
 
