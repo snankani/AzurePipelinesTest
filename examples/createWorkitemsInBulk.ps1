@@ -1,11 +1,13 @@
+# ignore the changes in this line. test in progress.
+
 #---------------------------------------------------------------------------------------------
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License. See License.txt in the project root for license information.
 # --------------------------------------------------------------------------------------------
 
 param(
-[string]$workitem_titles,
-[string]$wit_template
+    [string]$workitem_titles,
+    [string]$wit_template
 )
 
 Write-Host("Sample Usage -")
@@ -22,20 +24,19 @@ area=
 iteration=
 #>
 
-if (!$wit_template)
-{
+if (!$wit_template) {
     Write-Host("Template not provided will ask for default params interactively. Alternatively create a wit template and pass it to the script.")
     $organization = Read-host("Organization URL: ")
     $project = Read-host("Project Name: ")
     $workitem_type = Read-host("Workitem Type: ")
 }
-else{
-    foreach($line in Get-Content $wit_template) {
-    #    Write-Host($line)
+else {
+    foreach ($line in Get-Content $wit_template) {
+        #    Write-Host($line)
         $arr = $line.split('=')
         $x = "$" + $arr[0]
         $y = """" + $arr[1] + """"
-        if($y){
+        if ($y) {
             Invoke-Expression("$x = $y")
         }
     }
@@ -45,17 +46,16 @@ else{
     Write-Host("Creating a task with assigned to - " + $assignedto)
 }
 
-if (!$workitem_titles)
-{
+if (!$workitem_titles) {
     Write-Host("No file for workitem titles. Will run in interactive mode to create workitems.")
-    while(1) {
+    while (1) {
         $title = Read-Host("Enter workitem title: ")
         $command_string = "az boards work-item create --org $organization --project $project --title ""$title"" --type $workitem_type" # --assigned-to $assignedto #Doesnot seem to work
         Invoke-Expression($command_string) 
     }
 }
 else {
-    foreach($line in Get-Content $workitem_titles) {
+    foreach ($line in Get-Content $workitem_titles) {
         $command_string = "az boards work-item create --org $organization --project $project --title ""$line"" --type $workitem_type" # --assigned-to $assignedto #Doesnot seem to work
         Invoke-Expression($command_string) 
     }
