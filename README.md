@@ -1,8 +1,8 @@
-# test in progress. please ignore
+# test in progress. please ignore. updating
 
 [![Build Status](https://dev.azure.com/ms/azure-devops-cli-extension/_apis/build/status/Azure%20DevOps%20CLI%20-%20Merge%20GitHub?branchName=master)](https://dev.azure.com/ms/azure-devops-cli-extension/_build/latest?definitionId=39&branchName=master)
 
-# Azure DevOps Extension for Azure CLI
+# Azure DevOps Extension for Azure CLI     
 
 jklfjalkfjsa test line ignore
 
